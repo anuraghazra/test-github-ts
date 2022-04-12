@@ -1,4 +1,4 @@
-import merge from 'lodash.merge';
+import merge from 'deepmerge';
 
 const m = merge({}, {});
 
