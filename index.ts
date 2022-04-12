@@ -1,3 +1,5 @@
+import lodash from 'lodash';
+
 // Type level bubble sort algorithm
 // https://twitter.com/anuraghazra
 
