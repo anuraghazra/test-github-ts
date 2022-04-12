@@ -1,6 +1,6 @@
-import lodash from 'lodash';
+import merge from 'lodash/merge';
 
-const t = lodash.merge({}, {});
+const m = merge({}, {});
 
 // Type level bubble sort algorithm
 // https://twitter.com/anuraghazra
