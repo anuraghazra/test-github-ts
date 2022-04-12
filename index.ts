@@ -1,5 +1,24 @@
-type K<T> = {
-  'nice': T
-}
+// POC of type incompatibility diff view
 
-type Demo = K<number>
+type Children = {
+  msg: string;
+  from: string;
+};
+type FooWithBar = {
+  a: {
+    b: {
+      c: number
+    }
+  };
+};
+
+declare function sayHello(arg: FooWithBar): void;
+const fail = {
+  a: {
+    b: {
+      c: 'string'
+    }
+  }
+};
+
+sayHello(fail);
