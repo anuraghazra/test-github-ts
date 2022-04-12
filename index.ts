@@ -1,8 +1,10 @@
 import React from 'react';
 import merge from 'deepmerge';
+import { HelloFromAnotherFile } from "./second";
 
-const Comp: React.FC<{count: number}> = ({count}) => {
-  return <p>{count}</p>
+
+const Comp: React.FC<HelloFromAnotherFile> = ({hello}) => {
+  return <p>{hello}</p>
 }
 
 const c = <Comp count={1} />
