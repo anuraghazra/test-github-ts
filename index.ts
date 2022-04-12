@@ -1,4 +1,11 @@
+import React from 'react';
 import merge from 'deepmerge';
+
+const Comp: React.FC<{count: number}> = ({count}) => {
+  return <p>{count}</p>
+}
+
+const c = <Comp count={1} />
 
 const m = merge({}, {});
 
