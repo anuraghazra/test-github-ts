@@ -1,5 +1,7 @@
 import lodash from 'lodash';
 
+const t = lodash.merge({}, {});
+
 // Type level bubble sort algorithm
 // https://twitter.com/anuraghazra
 
