@@ -1,5 +1,6 @@
 import React from 'react';
 import merge from 'deepmerge';
+import r3f from '@react-three/fiber';
 import { HelloFromAnotherFile } from "./second";
 
 
