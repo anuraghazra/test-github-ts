@@ -3,6 +3,30 @@ import merge from 'deepmerge';
 import { HelloFromAnotherFile } from "./second";
 
 
+
+type GitTree = {
+  path: string;
+  mode: string;
+  type: string;
+  sha: string;
+  size: number;
+  url: string;
+}[];
+
+async function fetchGithubTree(): Promise<GitTree | undefined> {
+  const { username, repo, branch } = getRepoDetails();
+  const treeUrl = `https://api.github.com/repos/${username}/${repo}/git/trees/${branch}?recursive=1`;
+  const data = await fetchFromUrl(treeUrl);
+
+  try {
+    if (data) {
+      return JSON.parse(data).tree;
+    }
+  } catch (err) {
+    throw new Error("Failed to fetch tree");
+  }
+}
+
 const Comp: React.FC<HelloFromAnotherFile> = ({hello}) => {
   return <p>{hello}</p>
 }
