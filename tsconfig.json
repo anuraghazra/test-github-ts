@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "paths": {
+      "second-module": ["./second"],
+      "utils": ["./utils"],
+      "utils/*": ["./utils/*"]
+    }
+  }
+}

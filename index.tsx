@@ -1,9 +1,6 @@
-import React from 'react';
-import merge from 'deepmerge';
-import r3f from '@react-three/fiber';
-import { HelloFromAnotherFile } from "./second";
-
-
+import React from "react";
+import merge from "deepmerge";
+import { HelloFromAnotherFile } from "second-module";
 
 type GitTree = {
   path: string;
@@ -14,25 +11,11 @@ type GitTree = {
   url: string;
 }[];
 
-async function fetchGithubTree(): Promise<GitTree | undefined> {
-  const { username, repo, branch } = getRepoDetails();
-  const treeUrl = `https://api.github.com/repos/${username}/${repo}/git/trees/${branch}?recursive=1`;
-  const data = await fetchFromUrl(treeUrl);
+const Comp: React.FC<HelloFromAnotherFile> = ({ hello }) => {
+  return <p>{hello}</p>;
+};
 
-  try {
-    if (data) {
-      return JSON.parse(data).tree;
-    }
-  } catch (err) {
-    throw new Error("Failed to fetch tree");
-  }
-}
-
-const Comp: React.FC<HelloFromAnotherFile> = ({hello}) => {
-  return <p>{hello}</p>
-}
-
-const c = <Comp count={1} />
+const c = <Comp hello={"1"} />;
 
 const m = merge({}, {});
 
@@ -59,7 +42,6 @@ type Demo1 = BubbleSort<[9, 8, 2, 6, 5, 4, 1]>;
 //   ^?
 type Demo2 = BubbleSort<[234, 43, 55, 63, 5, 6, 235, 547]>;
 //   ^?
-
 
 // Math Utils
 namespace M {
@@ -108,11 +90,12 @@ type Children = {
   msg: string;
   from: string;
 };
+
 type FooWithBar = {
   a: {
     b: {
-      c: number
-    }
+      c: number;
+    };
   };
 };
 
@@ -120,9 +103,9 @@ declare function sayHello(arg: FooWithBar): void;
 const fail = {
   a: {
     b: {
-      c: 'string'
-    }
-  }
+      c: "string",
+    },
+  },
 };
 
 sayHello(fail);
