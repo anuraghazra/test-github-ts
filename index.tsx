@@ -1,6 +1,6 @@
 import React from "react";
 import merge from "deepmerge";
-import { HelloFromAnotherFile } from "second-module";
+import { HelloFromAnotherFile } from "./second";
 
 type GitTree = {
   path: string;
