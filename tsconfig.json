@@ -1,13 +1,6 @@
 {
+  "extends": "./tsconfig.extended.json",
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react",
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "resolveJsonModule": true,
     "paths": {
       "second-module": ["./second"],
       "utils": ["./utils"],
