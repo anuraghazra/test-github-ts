@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "second-module": ["./second"],
+      "utils": ["./utils"],
+      "utils/*": ["./utils/*"]
+    }
+  }
+}
