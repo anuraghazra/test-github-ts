@@ -69,7 +69,17 @@ namespace M {
     : false;
 }
 
-// JS equivalent
+/**
+ * Bubble sort
+ * 
+ * Sorts elements like a dummy
+ * 
+ * @example
+ * 
+ * ```ts
+ * bubbleSort([234, 43, 55, 63, 5, 6, 235, 547]);
+ * ```
+ */
 function bubbleSort(input: number[], curr: number = 0): number[] {
   if (curr == input.length) {
     return input;
