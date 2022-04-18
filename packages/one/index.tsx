@@ -12,6 +12,11 @@ type GitTree = {
 }[];
 
 const Comp: React.FC<HelloFromAnotherFile> = ({ hello }) => {
+  const [s, setS] = React.useState(() => {});
+
+  
+  React.useEffect(() => {});
+
   return <p>{hello}</p>;
 };
 
@@ -71,11 +76,11 @@ namespace M {
 
 /**
  * Bubble sort
- * 
+ *
  * Sorts elements like a dummy
- * 
+ *
  * @example
- * 
+ *
  * ```ts
  * bubbleSort([234, 43, 55, 63, 5, 6, 235, 547]);
  * ```
