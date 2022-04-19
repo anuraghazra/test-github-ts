@@ -1,6 +1,8 @@
 import React from "react";
 import merge from "deepmerge";
-import { HelloFromAnotherFile } from "second-module";
+import { HelloFromAnotherFile, data } from "second-module";
+
+console.log(data);
 
 type GitTree = {
   path: string;
@@ -14,7 +16,6 @@ type GitTree = {
 const Comp: React.FC<HelloFromAnotherFile> = ({ hello }) => {
   const [s, setS] = React.useState(() => {});
 
-  
   React.useEffect(() => {});
 
   return <p>{hello}</p>;
