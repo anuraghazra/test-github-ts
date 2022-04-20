@@ -1,8 +1,7 @@
 import React from "react";
 import merge from "deepmerge";
 import { HelloFromAnotherFile, data } from "second-module";
-
-console.log(data);
+import { MyTypeInAnotherPackage } from "another";
 
 type GitTree = {
   path: string;
@@ -13,15 +12,17 @@ type GitTree = {
   url: string;
 }[];
 
-const Comp: React.FC<HelloFromAnotherFile> = ({ hello }) => {
-  const [s, setS] = React.useState(() => {});
+const MyComponentIDontKnowWhereItIs: React.FC<HelloFromAnotherFile> = ({
+  hello,
+}) => {
+  const [count, setCount] = React.useState(() => {});
 
   React.useEffect(() => {});
 
   return <p>{hello}</p>;
 };
 
-const c = <Comp hello={"1"} />;
+const another: MyTypeInAnotherPackage = { msg: "nice" };
 
 const m = merge({}, {});
 
@@ -123,5 +124,7 @@ const fail = {
     },
   },
 };
+
+const jsx = <MyComponentIDontKnowWhereItIs hello={"1"} />;
 
 sayHello(fail);

@@ -1,3 +1,3 @@
-export type T = {
-  hello: string;
+export type MyTypeInAnotherPackage = {
+  msg: string;
 };

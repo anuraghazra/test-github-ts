@@ -1,3 +1,3 @@
-import { T } from "another";
+import { MyTypeInAnotherPackage } from "another";
 
-export const t: T = { hello: "world" };
+export const t: MyTypeInAnotherPackage = { msg: "world" };
