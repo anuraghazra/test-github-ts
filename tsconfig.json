@@ -2,8 +2,6 @@
   "extends": "./tsconfig.extended.json",
   "compilerOptions": {
     "paths": {
-      "another": ["./anotherpackage/hello-from-another.ts"],
-      "second-module": ["./packages/one/second"],
       "utils": ["./packages/one/utils"],
       "utils/*": ["./packages/one/utils/*"]
     }
