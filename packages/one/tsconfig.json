@@ -3,7 +3,9 @@
   "compilerOptions": {
     "paths": {
       "another": ["../../anotherpackage/hello-from-another.ts"],
-      "second-module": ["./second"]
+      "second-module": ["./second"],
+      "utils": ["./utils"],
+      "utils/*": ["./utils/*"]
     }
   }
 }
