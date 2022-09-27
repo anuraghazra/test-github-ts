@@ -3,7 +3,9 @@
   "compilerOptions": {
     "paths": {
       "utils": ["./packages/one/utils"],
-      "utils/*": ["./packages/one/utils/*"]
+      "utils/*": ["./packages/one/utils/*"],
+      "another": ["./anotherpackage/hello-from-another.ts"],
+      "second-module": ["./packages/one/second.ts"]
     }
   }
 }
