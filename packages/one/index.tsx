@@ -2,6 +2,10 @@ import React from "react";
 import merge from "deepmerge";
 import { HelloFromAnotherFile } from "second-module";
 import { MyTypeInAnotherPackage } from "another";
+import { logger, checkOdd } from "utils";
+
+logger();
+const isOdd = checkOdd(2);
 
 type GitTree = {
   path: string;
