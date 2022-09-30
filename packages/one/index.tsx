@@ -1,5 +1,6 @@
 import React from "react";
 import merge from "deepmerge";
+import fs from 'fs';
 import { HelloFromAnotherFile } from "second-module";
 import { MyTypeInAnotherPackage } from "another";
 import { logger, checkOdd } from "utils";
